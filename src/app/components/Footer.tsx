@@ -1,22 +1,26 @@
 import { Mail, MapPin, Instagram, Youtube, Facebook } from 'lucide-react';
 
+// Componente de Rodapé (Footer)
+
 export function Footer() {
   return (
+    // Container principal
     <footer className="bg-gradient-to-br from-[#e0daf7] to-white dark:from-[#1a0a2e] dark:to-[#2d1b4e] mt-20 border-t-4 border-double border-[#5015bd]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        {/* 1 coluna no mobile e 3 colunas em telas médias/grandes */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Sobre */}
+          {/* descrição sobre o projeto e ícones de redes sociais */}
           <div>
             <h3 className="text-[#3d0a49] dark:text-white font-bold text-xl mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Projeto Mente Aberta
             </h3>
-            {/* Adicionado dark:text-white/90! para forçar a cor no modo escuro */}
             <p className="text-sm text-[#5015bd] dark:text-white/90! leading-relaxed mb-4" style={{ fontFamily: 'Crimson Text, serif' }}>
               Espaço dedicado à divulgação dos trabalhos acadêmicos dos estudantes de Psicologia, promovendo o conhecimento científico e a troca de experiências.
             </p>
             
-            {/* Redes Sociais */}
+            {/* Links para Redes Sociais */}
             <div className="flex gap-3 mt-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-[#5015bd] p-2 border-2 border-[#3d0a49] hover:bg-[#3d0a49] transition-all hover:scale-110 shadow-[3px_3px_0px_0px_rgba(80,21,189,0.4)]">
                 <Instagram className="w-5 h-5 text-white" />
@@ -30,7 +34,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links Rápidos */}
+          {/* Menu de navegação para acesso interno */}
           <div>
             <h3 className="text-[#3d0a49] dark:text-white font-bold text-xl mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Navegação
@@ -54,7 +58,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contato */}
+          {/* Informações de contato institucional */}
           <div>
             <h3 className="text-[#3d0a49] dark:text-white font-bold text-xl mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Contato
@@ -80,6 +84,7 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Faixa inferior de Copyright e créditos do projeto */}
         <div className="border-t-2 border-[#5015bd]/20 dark:border-white/20 mt-8 pt-8 text-center">
           <p className="text-sm text-[#5015bd] dark:text-white/80" style={{ fontFamily: 'Crimson Text, serif' }}>
             <span className="text-[#00caf8] font-bold">★</span> Est. 2026 <span className="text-[#00caf8] font-bold">★</span> Projeto Mente Aberta <span className="text-[#00caf8] font-bold">★</span> Todos os direitos reservados

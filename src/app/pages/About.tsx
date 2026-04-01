@@ -9,7 +9,7 @@ export default function About() {
       <Navbar />
       
       <main className="flex-1">
-        {/* Header - AQUI ESTÁ O GRADIENTE E A BORDA IGUAL À DE PROJETOS */}
+        {/* Cabeçalho da página com gradiente e bordas */}
         <section className="bg-gradient-to-br from-[#3d0a49] to-[#5015bd] text-white py-16 border-b-4 border-double border-[#00caf8]">
           <ScrollReveal animation="fade-down" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-4 mb-4">
@@ -26,12 +26,12 @@ export default function About() {
           </ScrollReveal>
         </section>
 
-        {/* Main Content */}
+        {/* Seção de Missão com imagem lateral */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               
-              {/* Image */}
+              {/* Bloco de Imagem com sombra rígida */}
               <ScrollReveal animation="fade-right" className="order-2 lg:order-1">
                 <div className="border-8 border-double border-[#5015bd] overflow-hidden shadow-[8px_8px_0px_0px_rgba(80,21,189,0.3)]">
                   <img
@@ -42,7 +42,7 @@ export default function About() {
                 </div>
               </ScrollReveal>
 
-              {/* Text Content */}
+              {/* Texto descritivo sobre o projeto e o OBSAM */}
               <ScrollReveal animation="fade-left" className="order-1 lg:order-2 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 bg-[#5015bd] text-white px-4 py-2 border-2 border-[#3d0a49] text-sm font-bold uppercase tracking-widest mb-6 w-fit shadow-[2px_2px_0px_0px_rgba(61,10,73,0.4)]" style={{ fontFamily: 'Playfair Display, serif' }}>
                   <Target className="w-4 h-4" />
@@ -67,7 +67,7 @@ export default function About() {
               </ScrollReveal>
             </div>
 
-            {/* Objectives Cards */}
+            {/* Grid com os três principais objetivos */}
             <div className="mb-16">
               <ScrollReveal animation="fade-up" className="flex items-center gap-4 mb-12">
                 <div className="h-px flex-1 bg-[#5015bd]"></div>
@@ -122,7 +122,7 @@ export default function About() {
               </div>
             </div>
 
-            {/* Target Audience */}
+            {/* Listagem do Público-Alvo */}
             <ScrollReveal animation="zoom-in">
               <div className="bg-white border-4 border-[#5015bd] p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(80,21,189,0.3)] mb-16 hover:shadow-[12px_12px_0px_0px_rgba(2,127,233,0.4)] hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-8 justify-center">
@@ -174,7 +174,7 @@ export default function About() {
               </div>
             </ScrollReveal>
 
-            {/* Repository Info */}
+            {/* Informações Institucionais e Coordenação */}
             <ScrollReveal animation="fade-up">
               <div className="bg-[#3d0a49] border-4 border-[#5015bd] p-8 md:p-12 text-white mb-16 shadow-[8px_8px_0px_0px_rgba(80,21,189,0.5)]">
                 <div className="flex items-center gap-3 mb-8">
@@ -221,7 +221,7 @@ export default function About() {
               </div>
             </ScrollReveal>
 
-            {/* Contact CTA */}
+            {/* Seção final de CTA para contato direto */}
             <ScrollReveal animation="fade-up" className="text-center">
               <div className="flex items-center gap-4 mb-8 justify-center">
                 <div className="h-px w-20 bg-[#5015bd]"></div>

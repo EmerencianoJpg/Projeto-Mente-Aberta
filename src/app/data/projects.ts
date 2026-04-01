@@ -185,5 +185,5 @@ export const projects: Project[] = [
     ]
   }
 ];
-
+// Exportação reduzida para destaques da Home
 export const featuredProjects = projects.slice(0, 9);

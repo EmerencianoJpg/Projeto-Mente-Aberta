@@ -6,6 +6,7 @@ import { Link, useNavigate, useBlocker } from 'react-router';
 import { ScrollReveal } from '../components/ScrollReveal';
 
 export default function AdminPanel() {
+  // Estado principal que armazena todos os campos do formulário e arquivos
   const [formData, setFormData] = useState({
     title: '',
     authors: [''],
@@ -25,6 +26,7 @@ export default function AdminPanel() {
     documentPreviews: [] as { name: string; size: string }[],
   });
 
+  // Estados de controle da interface (previews, avisos e novos campos)
   const [showPreview, setShowPreview] = useState(false);
   const [showNewCourseInput, setShowNewCourseInput] = useState(false);
   const [newCourse, setNewCourse] = useState('');
@@ -33,6 +35,7 @@ export default function AdminPanel() {
 
   const navigate = useNavigate();
 
+  // Lista pré-definida de áreas/cursos para o seletor
   const courses = [
     'Psicologia Clínica', 'Psicologia Social', 'Psicologia Organizacional', 
     'Psicologia Educacional', 'Psicologia do Desenvolvimento', 'Psicologia da Saúde',
@@ -41,6 +44,7 @@ export default function AdminPanel() {
     'Psicologia Política', 'História da Psicologia',
   ];
 
+  // Gerencia mudanças em inputs de texto, textarea e select
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     if (name === 'course' && value === 'ADD_NEW_COURSE') {
@@ -50,6 +54,7 @@ export default function AdminPanel() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  // Funções para gerenciar a adição de novos cursos customizados
   const handleAddNewCourse = () => {
     if (newCourse.trim()) {
       setFormData(prev => ({ ...prev, course: newCourse.trim() }));
@@ -63,6 +68,7 @@ export default function AdminPanel() {
     setShowNewCourseInput(false);
   };
 
+  // Verifica se o formulário tem algum dado preenchido 
   const hasFormData = () => {
     return (
       formData.title !== '' || formData.description !== '' || 
@@ -70,6 +76,7 @@ export default function AdminPanel() {
     );
   };
 
+  // Bloqueador de navegação: impede que o usuário saia da página e perca os dados sem querer
   const blocker = useBlocker(
     ({ currentLocation, nextLocation }) =>
       hasFormData() && currentLocation.pathname !== nextLocation.pathname
@@ -98,6 +105,7 @@ export default function AdminPanel() {
     }
   };
 
+  // Funções para gerenciar a lista dinâmica de autores
   const handleAuthorChange = (index: number, value: string) => {
     const newAuthors = [...formData.authors];
     newAuthors[index] = value;
@@ -113,6 +121,7 @@ export default function AdminPanel() {
     }
   };
 
+  // Processa o upload da imagem de capa e gera um preview visual (base64)
   const handleCoverImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -124,6 +133,7 @@ export default function AdminPanel() {
     }
   };
 
+  // Processa múltiplos uploads (Galeria, Vídeos, Áudios ou Documentos)
   const handleMultipleFileUpload = (e: React.ChangeEvent<HTMLInputElement>, type: 'gallery' | 'videos' | 'audios' | 'documents') => {
     const files = Array.from(e.target.files || []);
     if (type === 'documents') {
@@ -144,6 +154,7 @@ export default function AdminPanel() {
     }
   };
 
+  // Remove um arquivo específico da lista de uploads
   const removeMultipleFile = (type: 'gallery' | 'videos' | 'audios' | 'documents', index: number) => {
     setFormData(prev => ({
       ...prev,
@@ -162,7 +173,7 @@ export default function AdminPanel() {
       <Navbar />
       
       <main className="flex-1">
-        {/* Header - Gradiente e Borda Ciano */}
+        {/* Cabeçalho do Painel com botões de navegação e preview */}
         <section className="bg-gradient-to-br from-[#3d0a49] to-[#5015bd] text-white py-12 border-b-4 border-double border-[#00caf8]">
           <ScrollReveal animation="fade-down" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-6">
@@ -183,10 +194,10 @@ export default function AdminPanel() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <form onSubmit={handleSubmit} className="space-y-8">
               
-              {/* 1. Informações Básicas */}
+              {/* Seção 1: Campos de texto (Título, Resumo e Descrição Longa) */}
               <ScrollReveal animation="fade-up" delay={100}>
                 <div className="bg-white border-4 border-[#5015bd] p-8 shadow-[8px_8px_0px_0px_rgba(80,21,189,0.3)]">
-                  <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3">
                     <FileText className="w-6 h-6" /> Informações Básicas
                   </h2>
                   <div className="space-y-4">
@@ -197,10 +208,10 @@ export default function AdminPanel() {
                 </div>
               </ScrollReveal>
 
-              {/* 2. Capa */}
+              {/* Seção 2: Upload de Capa Principal */}
               <ScrollReveal animation="fade-up" delay={200}>
                 <div className="bg-white border-4 border-[#5015bd] p-8 shadow-[8px_8px_0px_0px_rgba(80,21,189,0.3)]">
-                   <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3" style={{ fontFamily: 'Playfair Display, serif' }}>
+                   <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3">
                     <ImageIcon className="w-6 h-6" /> Capa Principal
                   </h2>
                   <label className="block w-full h-48 border-4 border-dashed border-[#5015bd] bg-[#e0daf7] hover:bg-[#d0cae0] cursor-pointer transition-colors">
@@ -213,10 +224,10 @@ export default function AdminPanel() {
                 </div>
               </ScrollReveal>
 
-              {/* 3. Galeria */}
+              {/* Seções de Mídia (Galeria, Vídeos, Áudios e Documentos) */}
               <ScrollReveal animation="fade-up" delay={300}>
                 <div className="bg-white border-4 border-[#5015bd] p-8 shadow-[8px_8px_0px_0px_rgba(80,21,189,0.3)]">
-                  <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3">
                     <ImageIcon className="w-6 h-6" /> Galeria de Fotos
                   </h2>
                   <label className="block w-full h-32 border-4 border-dashed border-[#5015bd] bg-[#e0daf7] hover:bg-[#d0cae0] cursor-pointer flex flex-col items-center justify-center">
@@ -227,57 +238,16 @@ export default function AdminPanel() {
                 </div>
               </ScrollReveal>
 
-              {/* 4. Vídeos (RECOLOCADO) */}
-              <ScrollReveal animation="fade-up" delay={400}>
-                <div className="bg-white border-4 border-[#5015bd] p-8 shadow-[8px_8px_0px_0px_rgba(80,21,189,0.3)]">
-                  <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    <Video className="w-6 h-6" /> Vídeos (Opcional)
-                  </h2>
-                  <label className="block w-full h-32 border-4 border-dashed border-[#5015bd] bg-[#e0daf7] hover:bg-[#d0cae0] cursor-pointer flex flex-col items-center justify-center">
-                    <Plus className="w-8 h-8 mb-2" />
-                    <span className="font-bold">Adicionar Vídeos</span>
-                    <input type="file" multiple className="hidden" onChange={(e) => handleMultipleFileUpload(e, 'videos')} accept="video/*" />
-                  </label>
-                </div>
-              </ScrollReveal>
 
-              {/* 5. Áudios (RECOLOCADO) */}
-              <ScrollReveal animation="fade-up" delay={500}>
-                <div className="bg-white border-4 border-[#5015bd] p-8 shadow-[8px_8px_0px_0px_rgba(80,21,189,0.3)]">
-                  <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    <Music className="w-6 h-6" /> Áudios (Opcional)
-                  </h2>
-                  <label className="block w-full h-32 border-4 border-dashed border-[#5015bd] bg-[#e0daf7] hover:bg-[#d0cae0] cursor-pointer flex flex-col items-center justify-center">
-                    <Plus className="w-8 h-8 mb-2" />
-                    <span className="font-bold">Adicionar Áudios</span>
-                    <input type="file" multiple className="hidden" onChange={(e) => handleMultipleFileUpload(e, 'audios')} accept="audio/*" />
-                  </label>
-                </div>
-              </ScrollReveal>
-
-              {/* 6. Documentos (RECOLOCADO) */}
-              <ScrollReveal animation="fade-up" delay={600}>
-                <div className="bg-white border-4 border-[#5015bd] p-8 shadow-[8px_8px_0px_0px_rgba(80,21,189,0.3)]">
-                  <h2 className="text-2xl font-bold text-[#3d0a49] mb-6 uppercase tracking-wide flex items-center gap-3" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    <FileText className="w-6 h-6" /> Documentos/Artigos (Opcional)
-                  </h2>
-                  <label className="block w-full h-32 border-4 border-dashed border-[#5015bd] bg-[#e0daf7] hover:bg-[#d0cae0] cursor-pointer flex flex-col items-center justify-center">
-                    <Plus className="w-8 h-8 mb-2" />
-                    <span className="font-bold">Adicionar Documentos</span>
-                    <input type="file" multiple className="hidden" onChange={(e) => handleMultipleFileUpload(e, 'documents')} accept=".pdf,.doc,.docx" />
-                  </label>
-                </div>
-              </ScrollReveal>
-
-              {/* 7. Preview (RECOLOCADO) */}
+              {/* Seção de Preview */}
               {showPreview && (
                 <ScrollReveal animation="fade-up">
                   <div className="bg-[#3d0a49] border-4 border-[#5015bd] p-8 text-white shadow-[8px_8px_0px_0px_rgba(80,21,189,0.5)]">
-                    <h2 className="text-2xl font-bold mb-6 uppercase tracking-wide flex items-center gap-3" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    <h2 className="text-2xl font-bold mb-6 uppercase tracking-wide flex items-center gap-3">
                       <Eye className="w-6 h-6" /> Preview do Projeto
                     </h2>
                     <div className="bg-white border-4 border-[#5015bd] p-6 text-[#3d0a49]">
-                      <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>{formData.title || 'Título do Projeto'}</h3>
+                      <h3 className="text-2xl font-bold mb-2">{formData.title || 'Título do Projeto'}</h3>
                       <p className="mb-4">{formData.description || 'Descrição resumida...'}</p>
                       <div className="bg-[#5015bd] text-white px-3 py-1 inline-block border border-[#3d0a49]">Curso/Área</div>
                     </div>
@@ -285,7 +255,7 @@ export default function AdminPanel() {
                 </ScrollReveal>
               )}
 
-              {/* Botões de Ação */}
+              {/* Botões de Ação: Cancelar (limpar) ou Publicar (submit) */}
               <ScrollReveal animation="fade-up" delay={700}>
                 <div className="flex flex-col sm:flex-row gap-4 justify-end">
                   <button type="button" onClick={() => window.location.reload()} className="px-8 py-4 bg-gray-500 text-white border-2 border-gray-700 font-bold uppercase shadow-[4px_4px_0px_0px_rgba(55,65,81,1)]">Cancelar</button>
