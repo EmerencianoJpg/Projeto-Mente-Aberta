@@ -1,6 +1,3 @@
-Aqui está seu texto formatado em **Markdown pronto para README do GitHub** 👇
-
-````markdown
 # 🧠 Projeto Mente Aberta - Mostra Virtual de Psicologia
 
 O **Projeto Mente Aberta** é uma plataforma digital permanente dedicada à divulgação da produção científica e acadêmica dos estudantes de Psicologia. O objetivo é aproximar a universidade da comunidade, dando visibilidade a pesquisas e intervenções em saúde mental e práticas comunitárias.
@@ -46,23 +43,15 @@ O projeto foi desenvolvido com uma stack moderna de Front-end para garantir perf
 Certifique-se de ter o **Node.js** instalado em sua máquina.
 
 ### 1. Instale as dependências
-```bash
 npm install
-````
 
 ### 2. Inicie o servidor de desenvolvimento
-
-```bash
 npm run dev
-```
 
 ### 3. Acesse no navegador
 
 O Vite geralmente abrirá o projeto automaticamente em:
-
-```
 http://localhost:5173
-```
 
 ---
 
@@ -84,7 +73,3 @@ http://localhost:5173
 Este projeto é de caráter acadêmico e institucional.
 Para informações sobre o uso de recursos de terceiros (como bibliotecas, ícones e fotografias), consulte o arquivo `ATTRIBUTIONS.md`.
 
-```
-
-Se quiser, posso deixar esse README mais “bonito” ainda (com badges, gifs, preview do projeto, etc.) ou adaptar pra inglês também.
-```
