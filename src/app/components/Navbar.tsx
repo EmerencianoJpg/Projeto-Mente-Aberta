@@ -11,28 +11,28 @@ export function Navbar() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setIsDarkMode(true);
-      // Alterado de 'dark-mode' para 'dark' para compatibilidade nativa com o Tailwind
-      document.documentElement.classList.add('dark');
+      // Ativa as duas classes para garantir compatibilidade total
+      document.documentElement.classList.add('dark', 'dark-mode');
     }
   }, []);
 
   const toggleTheme = () => {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);
+    
     if (newMode) {
-      // Ativa o modo escuro padrão do Tailwind
-      document.documentElement.classList.add('dark');
+      // Adiciona 'dark' (pro Footer) e 'dark-mode' (pro resto do site)
+      document.documentElement.classList.add('dark', 'dark-mode');
       localStorage.setItem('theme', 'dark');
     } else {
-      // Remove o modo escuro
-      document.documentElement.classList.remove('dark');
+      // Remove ambas
+      document.documentElement.classList.remove('dark', 'dark-mode');
       localStorage.setItem('theme', 'light');
     }
   };
 
   return (
     <>
-      {/* Navbar FIXED para acompanhar o scroll */}
       <nav className="bg-white border-b-4 border-double border-[#5015bd] fixed top-0 left-0 w-full z-[100] shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
@@ -85,7 +85,6 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Espaçador para compensar a navbar flutuante */}
       <div className="h-20 w-full"></div>
     </>
   );
