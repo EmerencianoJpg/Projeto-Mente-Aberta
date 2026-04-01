@@ -1,0 +1,107 @@
+/* Paleta de cores vibrantes e coloridas */
+/* Inspirada nos posts do Instagram do OBSAM */
+
+/* ============================================
+   CORES PRINCIPAIS
+   ============================================ */
+
+/* Vermelho coral/terracota (primária) */
+.bg-primary-vivid { background-color: #D84148; }
+.text-primary-vivid { color: #D84148; }
+.border-primary-vivid { border-color: #D84148; }
+.hover\:bg-primary-vivid:hover { background-color: #D84148; }
+.hover\:text-primary-vivid:hover { color: #D84148; }
+
+.bg-primary-dark { background-color: #C13139; }
+.text-primary-dark { color: #C13139; }
+
+/* Azul turquesa (secundária) */
+.bg-secondary-vivid { background-color: #5A9EAA; }
+.text-secondary-vivid { color: #5A9EAA; }
+.border-secondary-vivid { border-color: #5A9EAA; }
+.hover\:bg-secondary-vivid:hover { background-color: #5A9EAA; }
+.hover\:text-secondary-vivid:hover { color: #5A9EAA; }
+
+.bg-secondary-dark { background-color: #4A8694; }
+.text-secondary-dark { color: #4A8694; }
+
+/* Amarelo dourado (acento) */
+.bg-accent-vivid { background-color: #E8B04B; }
+.text-accent-vivid { color: #E8B04B; }
+.border-accent-vivid { border-color: #E8B04B; }
+.hover\:bg-accent-vivid:hover { background-color: #E8B04B; }
+.hover\:text-accent-vivid:hover { color: #E8B04B; }
+
+.bg-accent-dark { background-color: #D99F3A; }
+.text-accent-dark { color: #D99F3A; }
+
+/* Verde água (acento secundário) */
+.bg-green-vivid { background-color: #7EC8A3; }
+.text-green-vivid { color: #7EC8A3; }
+.border-green-vivid { border-color: #7EC8A3; }
+.hover\:bg-green-vivid:hover { background-color: #7EC8A3; }
+.hover\:text-green-vivid:hover { color: #7EC8A3; }
+
+/* ============================================
+   CORES NEUTRAS
+   ============================================ */
+
+.bg-neutral-cream { background-color: #FFF9F0; }
+.bg-neutral-light { background-color: #F5F0E8; }
+.bg-neutral-white { background-color: #FFFFFF; }
+
+.text-neutral-dark { color: #2D2D2D; }
+.text-neutral-medium { color: #5A5A5A; }
+.text-neutral-light { color: #8A8A8A; }
+
+/* ============================================
+   SOMBRAS COLORIDAS
+   ============================================ */
+
+.shadow-primary-vivid {
+  box-shadow: 4px 4px 0px 0px rgba(216, 65, 72, 0.4);
+}
+
+.shadow-primary-vivid-lg {
+  box-shadow: 6px 6px 0px 0px rgba(216, 65, 72, 0.5);
+}
+
+.shadow-secondary-vivid {
+  box-shadow: 4px 4px 0px 0px rgba(90, 158, 170, 0.4);
+}
+
+.shadow-secondary-vivid-lg {
+  box-shadow: 6px 6px 0px 0px rgba(90, 158, 170, 0.5);
+}
+
+.shadow-accent-vivid {
+  box-shadow: 4px 4px 0px 0px rgba(232, 176, 75, 0.4);
+}
+
+.shadow-accent-vivid-lg {
+  box-shadow: 6px 6px 0px 0px rgba(232, 176, 75, 0.5);
+}
+
+/* ============================================
+   GRADIENTES COLORIDOS
+   ============================================ */
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #D84148 0%, #C13139 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #5A9EAA 0%, #4A8694 100%);
+}
+
+.bg-gradient-multicolor {
+  background: linear-gradient(135deg, #D84148 0%, #5A9EAA 50%, #E8B04B 100%);
+}
+
+.bg-gradient-warm {
+  background: linear-gradient(135deg, #E8B04B 0%, #D84148 100%);
+}
+
+.bg-gradient-cool {
+  background: linear-gradient(135deg, #5A9EAA 0%, #7EC8A3 100%);
+}

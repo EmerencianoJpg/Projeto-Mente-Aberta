@@ -1,0 +1,36 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+@import './colors.css';
+
+/* Reset de scroll behavior */
+html {
+  scroll-behavior: auto;
+}
+
+/* Previne overflow horizontal */
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Garante que nenhum elemento filho ultrapasse a largura da tela */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  max-width: 100%;
+}
+
+/* Esconde a scrollbar do navegador de tabs no mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

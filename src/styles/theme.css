@@ -1,0 +1,874 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --font-family-serif: 'Playfair Display', serif;
+  --font-family-body: 'Crimson Text', serif;
+  
+  /* Nova paleta vibrante e colorida */
+  --background: #FFF9F0;
+  --foreground: #2D2D2D;
+  --card: #FFFFFF;
+  --card-foreground: #2D2D2D;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2D2D;
+  
+  /* Primária: Vermelho coral/terracota */
+  --primary: #D84148;
+  --primary-foreground: #FFFFFF;
+  --primary-hover: #C13139;
+  
+  /* Secundária: Azul turquesa */
+  --secondary: #5A9EAA;
+  --secondary-foreground: #FFFFFF;
+  --secondary-hover: #4A8694;
+  
+  /* Acentos vibrantes */
+  --accent: #E8B04B;
+  --accent-foreground: #2D2D2D;
+  --accent-hover: #D99F3A;
+  
+  /* Acento secundário: Verde água */
+  --accent-2: #7EC8A3;
+  --accent-2-foreground: #2D2D2D;
+  
+  /* Neutros */
+  --muted: #F5F0E8;
+  --muted-foreground: #5A5A5A;
+  --destructive: #D84148;
+  --destructive-foreground: #FFFFFF;
+  
+  /* Bordas e inputs */
+  --border: rgba(216, 65, 72, 0.3);
+  --input: transparent;
+  --input-background: #FFFFFF;
+  --switch-background: #E8B04B;
+  
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: #D84148;
+  
+  /* Charts com cores vibrantes */
+  --chart-1: #D84148;
+  --chart-2: #5A9EAA;
+  --chart-3: #E8B04B;
+  --chart-4: #7EC8A3;
+  --chart-5: #C84343;
+  
+  --radius: 0.25rem;
+  
+  /* Sidebar */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2D2D2D;
+  --sidebar-primary: #D84148;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FFF9F0;
+  --sidebar-accent-foreground: #2D2D2D;
+  --sidebar-border: rgba(216, 65, 72, 0.2);
+  --sidebar-ring: #D84148;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-family-body);
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-family-serif);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+/* Dark Mode - Tema Noturno */
+.dark-mode {
+  /* Backgrounds escuros suaves */
+  --bg-primary: #0f0818;
+  --bg-secondary: #1a0f26;
+  --bg-tertiary: #251735;
+  --bg-card: #1f1330;
+  --bg-elevated: #2a1a3d;
+  
+  /* Textos com bom contraste */
+  --text-primary: #e8e3f5;
+  --text-secondary: #c4b8db;
+  --text-muted: #9a8ab8;
+  --text-accent: #4db8e8;
+  
+  /* Bordas e divisores suaves */
+  --border-color: #3d2554;
+  --border-subtle: rgba(61, 37, 84, 0.4);
+  
+  /* Cores primárias suavizadas */
+  --color-primary: #6b3cc9;
+  --color-primary-hover: #8252db;
+  --color-secondary: #3d7bbf;
+  --color-secondary-hover: #4db8e8;
+  
+  /* Sombras escuras */
+  --shadow-primary: rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Container principal */
+.dark-mode .min-h-screen.bg-\[#FFF9F0\] {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Main e todas as sections precisam ter fundo escuro */
+.dark-mode main {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Garantir que não há espaços brancos entre seções */
+.dark-mode section {
+  background-color: transparent !important;
+}
+
+/* Sections específicas mantêm suas cores */
+.dark-mode section.bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark-mode section.bg-\[#e0daf7\]\/40,
+.dark-mode section.featured-section {
+  background-color: var(--bg-card) !important;
+}
+
+.dark-mode section.bg-gradient-to-br {
+  background: linear-gradient(to bottom right, var(--bg-tertiary), var(--bg-card)) !important;
+}
+
+/* Navbar */
+.dark-mode nav {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode nav .text-\\[\\#5015bd\\] {
+  color: var(--text-secondary) !important;
+}
+
+.dark-mode nav .text-\\[\\#5015bd\\]:hover,
+.dark-mode nav .hover\\:text-\\[\\#027fe9\\]:hover {
+  color: var(--text-accent) !important;
+}
+
+.dark-mode nav .bg-\\[\\#027fe9\\] {
+  background-color: var(--color-secondary) !important;
+}
+
+.dark-mode nav .hover\\:bg-\\[\\#00caf8\\]:hover {
+  background-color: var(--color-secondary-hover) !important;
+}
+
+.dark-mode nav span[style*="Playfair Display"] {
+  color: var(--text-primary) !important;
+}
+
+.dark-mode nav .border-\\[\\#3d0a49\\] {
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode nav .bg-white {
+  background-color: var(--bg-elevated) !important;
+}
+
+/* Footer */
+.dark-mode footer {
+  background: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  margin-top: 0 !important; /* Remove o espaço branco acima do footer */
+}
+
+/* Adicionar padding top ao footer para compensar */
+.dark-mode footer > div {
+  padding-top: 5rem !important;
+}
+
+/* Títulos do footer em BRANCO para maior visibilidade */
+.dark-mode footer h3 {
+  color: #ffffff !important;
+}
+
+/* Demais textos do footer com boa legibilidade */
+.dark-mode footer p,
+.dark-mode footer a,
+.dark-mode footer .text-\\[\\#3d0a49\\],
+.dark-mode footer .text-\\[\\#5015bd\\] {
+  color: var(--text-primary) !important;
+}
+
+/* Hero Section */
+.dark-mode .bg-gradient-to-br.from-\\[\\#3d0a49\\] {
+  background: linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary)) !important;
+}
+
+.dark-mode .border-\\[\\#00caf8\\] {
+  border-color: var(--color-secondary-hover) !important;
+}
+
+/* Stats Section */
+.dark-mode section.bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark-mode .border-\\[\\#027fe9\\] {
+  border-color: var(--border-color) !important;
+}
+
+/* Textos das estatísticas em BRANCO */
+.dark-mode .stat-label {
+  color: #ffffff !important;
+}
+
+/* Cards de Estatísticas */
+.dark-mode .bg-\\[\\#5015bd\\] {
+  background-color: var(--color-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .bg-\\[\\#027fe9\\] {
+  background-color: var(--color-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .bg-\\[\\#00caf8\\] {
+  background-color: var(--color-secondary-hover) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .border-\\[\\#3d0a49\\] {
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .border-\\[\\#5015bd\\] {
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .text-\\[\\#5015bd\\] {
+  color: var(--text-accent) !important;
+}
+
+.dark-mode .text-\\[\\#027fe9\\] {
+  color: var(--color-secondary-hover) !important;
+}
+
+.dark-mode .text-\\[\\#00caf8\\] {
+  color: var(--text-accent) !important;
+}
+
+/* Featured Projects Section - Background escuro igual aos cards */
+.dark-mode .featured-section {
+  background-color: var(--bg-card) !important;
+}
+
+/* Título e subtítulo da seção de projetos em destaque em BRANCO */
+.dark-mode .featured-section h2,
+.dark-mode .featured-section p {
+  color: #ffffff !important;
+}
+
+/* Cards de Projetos */
+.dark-mode .bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+.dark-mode .text-neutral-dark {
+  color: var(--text-primary) !important;
+}
+
+.dark-mode .text-neutral-medium {
+  color: var(--text-secondary) !important;
+}
+
+.dark-mode .group-hover\\:text-\\[\\#5015bd\\]:hover {
+  color: var(--text-accent) !important;
+}
+
+.dark-mode .border-\\[\\#027fe9\\]\\/20 {
+  border-color: var(--border-subtle) !important;
+}
+
+/* Botões */
+.dark-mode .bg-white.text-\\[\\#3d0a49\\] {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .hover\\:bg-\\[\\#00caf8\\]:hover {
+  background-color: var(--color-secondary-hover) !important;
+}
+
+.dark-mode .hover\\:text-\\[\\#027fe9\\]:hover {
+  color: var(--text-accent) !important;
+}
+
+.dark-mode .hover\\:text-\\[\\#5015bd\\]:hover {
+  color: var(--text-accent) !important;
+}
+
+.dark-mode .hover\\:bg-\\[\\#e0daf7\\]:hover {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.dark-mode .bg-transparent {
+  background-color: transparent !important;
+}
+
+.dark-mode .border-white {
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .hover\\:bg-white:hover {
+  background-color: var(--bg-elevated) !important;
+}
+
+.dark-mode .hover\\:text-\\[\\#5015bd\\]:hover {
+  color: var(--text-accent) !important;
+}
+
+/* CTA Section */
+.dark-mode .bg-gradient-to-br.from-\\[\\#5015bd\\] {
+  background: linear-gradient(to bottom right, var(--bg-tertiary), var(--bg-card)) !important;
+}
+
+.dark-mode .border-\\[\\#a7dbab\\] {
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .bg-\\[\\#e4f5b1\\] {
+  background-color: var(--color-secondary-hover) !important;
+  color: var(--bg-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .hover\\:bg-\\[\\#a7dbab\\]:hover {
+  background-color: var(--text-accent) !important;
+  color: var(--bg-primary) !important;
+}
+
+/* Sombras */
+.dark-mode [class*="shadow-\\["] {
+  opacity: 0.6;
+}
+
+/* Inputs */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Carrossel */
+.dark-mode .swiper-button-next,
+.dark-mode .swiper-button-prev {
+  background-color: var(--color-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .swiper-button-next:hover,
+.dark-mode .swiper-button-prev:hover {
+  background-color: var(--color-secondary) !important;
+}
+
+/* Bordas duplas */
+.dark-mode .border-double {
+  border-color: var(--border-color) !important;
+}
+
+/* Floating Admin Button */
+.dark-mode .floating-admin-btn {
+  background-color: var(--color-secondary-hover) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .floating-admin-btn:hover {
+  background-color: var(--color-secondary) !important;
+}
+
+.dark-mode .floating-admin-btn svg {
+  color: var(--bg-primary) !important;
+}
+
+/* Links e Hover States */
+.dark-mode a {
+  color: var(--text-secondary);
+}
+
+.dark-mode a:hover {
+  color: var(--text-accent);
+}
+
+/* Imagens e logos */
+.dark-mode img {
+  opacity: 0.95;
+}
+
+/* Textos em gradientes */
+.dark-mode .bg-gradient-to-r {
+  opacity: 0.8;
+}
+
+/* Text colors específicos */
+.dark-mode .text-\\[\\#635274\\] {
+  color: var(--text-secondary) !important;
+}
+
+/* EXCEÇÃO: Áreas de upload mantêm texto roxo escuro sobre fundo roxo claro */
+.dark-mode label.bg-\\[\\#e0daf7\\] .text-\\[\\#3d0a49\\],
+.dark-mode label.bg-\\[\\#e0daf7\\] span {
+  color: #3d0a49 !important;
+}
+
+.dark-mode label.hover\\:bg-\\[\\#d0cae0\\] .text-\\[\\#3d0a49\\],
+.dark-mode label.hover\\:bg-\\[\\#d0cae0\\] span {
+  color: #3d0a49 !important;
+}
+
+/* Ícones dentro das áreas de upload também em roxo escuro */
+.dark-mode label.bg-\\[\\#e0daf7\\] svg,
+.dark-mode label.hover\\:bg-\\[\\#d0cae0\\] svg {
+  color: #3d0a49 !important;
+}
+
+/* Projects Page - Modo Noturno */
+.dark-mode .bg-\\[#e0daf7\\]\\/20 {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Projects Page - Seção de Filtros */
+.dark-mode section.bg-white.border-b-4 {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Projects Page - Inputs e Selects */
+.dark-mode .border-\\[#5015bd\\] {
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .text-\\[#3d0a49\\] {
+  color: var(--text-primary) !important;
+}
+
+.dark-mode .focus\\:border-\\[#027fe9\\]:focus {
+  border-color: var(--color-secondary-hover) !important;
+}
+
+/* Projects Page - Títulos dos Filtros em BRANCO no dark mode */
+.dark-mode label.text-\\[#3d0a49\\] {
+  color: #ffffff !important;
+}
+
+/* Regra ainda mais específica para os labels dos filtros */
+.dark-mode label.text-xs.font-bold {
+  color: #ffffff !important;
+}
+
+.dark-mode label.uppercase.tracking-wide {
+  color: #ffffff !important;
+}
+
+/* Garantir que todos os labels na seção de filtros sejam brancos */
+.dark-mode section label {
+  color: #ffffff !important;
+}
+
+/* Project Cards - Modo Noturno */
+.dark-mode .bg-white.border-4 {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .bg-\\[#e0daf7\\] {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.dark-mode .border-b-4.border-\\[#5015bd\\] {
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .text-\\[#5015bd\\] {
+  color: var(--text-secondary) !important;
+}
+
+.dark-mode .group:hover .group-hover\\:text-\\[#027fe9\\] {
+  color: var(--text-accent) !important;
+}
+
+.dark-mode .border-\\[#5015bd\\]\\/20 {
+  border-color: var(--border-subtle) !important;
+}
+
+/* Category badge no card */
+.dark-mode .bg-\\[#5015bd\\].text-white {
+  background-color: var(--color-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Textos dos Project Cards em BRANCO para melhor legibilidade */
+.dark-mode .group .text-\\[#3d0a49\\] {
+  color: #ffffff !important;
+}
+
+.dark-mode .group h3 {
+  color: #ffffff !important;
+}
+
+.dark-mode .group p.text-\\[#5015bd\\] {
+  color: #ffffff !important;
+}
+
+.dark-mode .group p.text-\\[#3d0a49\\] {
+  color: #ffffff !important;
+}
+
+.dark-mode .group .text-xs.font-semibold {
+  color: #ffffff !important;
+}
+
+.dark-mode .group .text-sm {
+  color: #ffffff !important;
+}
+
+.dark-mode .group .text-\\[#5015bd\\].font-semibold {
+  color: #ffffff !important;
+}
+
+/* Hover state do "Ver detalhes" */
+.dark-mode .group:hover h3 {
+  color: var(--text-accent) !important;
+}
+
+.dark-mode .group:hover .group-hover\\:text-\\[#027fe9\\] {
+  color: var(--text-accent) !important;
+}
+
+/* ========================================
+   PROJECT DETAIL PAGE - Modo Noturno
+   ======================================== */
+
+/* Todos os títulos e headings em BRANCO */
+.dark-mode main h1,
+.dark-mode main h2,
+.dark-mode main h3,
+.dark-mode main h4 {
+  color: #ffffff !important;
+}
+
+/* Todos os parágrafos e textos em BRANCO */
+.dark-mode main p,
+.dark-mode main span,
+.dark-mode main li {
+  color: #ffffff !important;
+}
+
+/* Textos específicos da página de detalhes */
+.dark-mode main .text-\\[#3d0a49\\] {
+  color: #ffffff !important;
+}
+
+.dark-mode main .text-\\[#5015bd\\] {
+  color: #ffffff !important;
+}
+
+/* Labels e metadados */
+.dark-mode main .text-xs,
+.dark-mode main .text-sm {
+  color: #ffffff !important;
+}
+
+/* Listas de autores e informações */
+.dark-mode main ul li {
+  color: #ffffff !important;
+}
+
+/* Descrições e conteúdo de texto */
+.dark-mode main .prose p {
+  color: #ffffff !important;
+}
+
+/* Nomes de arquivos e documentos */
+.dark-mode main .truncate {
+  color: #ffffff !important;
+}
+
+/* Contador de imagens na galeria */
+.dark-mode main .absolute.bottom-4 {
+  color: #ffffff !important;
+}
+
+/* Textos de estado vazio (sem conteúdo) */
+.dark-mode main .text-center p {
+  color: #ffffff !important;
+}
+
+/* Links e botões de voltar */
+.dark-mode main a span {
+  color: inherit !important;
+}
+
+/* ========================================
+   ANIMAÇÕES CIRCULARES
+   ======================================== */
+
+/* Rotação horária lenta para o texto (30 segundos) */
+@keyframes spin-slow-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow-clockwise {
+  animation: spin-slow-clockwise 30s linear infinite;
+}
+
+/* Rotação horária média para círculo tracejado branco (20 segundos) */
+@keyframes spin-medium-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-medium-clockwise {
+  animation: spin-medium-clockwise 20s linear infinite;
+}
+
+/* Rotação anti-horária para círculo pontilhado ciano (15 segundos) */
+@keyframes spin-counter-clockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-counter-clockwise {
+  animation: spin-counter-clockwise 60s linear infinite;
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+   ======================================== */
+
+/* Estado inicial (antes de entrar no viewport) */
+.scroll-reveal {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estado visível (quando entra no viewport) */
+.scroll-reveal.is-visible {
+  opacity: 1;
+}
+
+/* Animação fade-up: vem de baixo para cima */
+.scroll-reveal.fade-up {
+  transform: translateY(50px);
+}
+
+.scroll-reveal.fade-up.is-visible {
+  transform: translateY(0);
+}
+
+/* Animação fade-down: vem de cima para baixo */
+.scroll-reveal.fade-down {
+  transform: translateY(-50px);
+}
+
+.scroll-reveal.fade-down.is-visible {
+  transform: translateY(0);
+}
+
+/* Animação fade-left: vem da direita para esquerda */
+.scroll-reveal.fade-left {
+  transform: translateX(50px);
+}
+
+.scroll-reveal.fade-left.is-visible {
+  transform: translateX(0);
+}
+
+/* Animação fade-right: vem da esquerda para direita */
+.scroll-reveal.fade-right {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal.fade-right.is-visible {
+  transform: translateX(0);
+}
+
+/* Animação zoom-in: escala de pequeno para normal */
+.scroll-reveal.zoom-in {
+  transform: scale(0.9);
+}
+
+.scroll-reveal.zoom-in.is-visible {
+  transform: scale(1);
+}
+
+/* Animação fade-in: apenas opacidade */
+.scroll-reveal.fade-in {
+  /* Sem transform, apenas fade */
+}
+
+.scroll-reveal.fade-in.is-visible {
+  /* Já tem opacity: 1 da classe base */
+}
