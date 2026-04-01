@@ -31,12 +31,12 @@ da **Universidade Federal de Jataí (UFJ)**
   <img src="https://skillicons.dev/icons?i=react,vite,tailwind,ts,js" />
 </p>
 
-- ⚛️ **React (v18+)**
-- ⚡ **Vite**
-- 🎨 **Tailwind CSS**
-- 🧩 **Lucide React**
-- 🔀 **React Router**
-- ✨ **ScrollReveal Custom**
+-  **React (v18+)**
+-  **Vite**
+-  **Tailwind CSS**
+-  **Lucide React**
+-  **React Router**
+-  **ScrollReveal Custom**
 
 ---
 
