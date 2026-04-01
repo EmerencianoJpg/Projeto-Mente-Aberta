@@ -42,8 +42,8 @@ da **Universidade Federal de Jataí (UFJ)**
 
 ## ✨ Funcionalidades
 
-### 📂 Galeria Dinâmica
-- Filtros avançados por:
+### 📂 Galeria de Projetos
+- Filtros por:
   - Curso / Área  
   - Ano  
   - Autor  
@@ -55,21 +55,20 @@ da **Universidade Federal de Jataí (UFJ)**
 - 📥 Download de artigos e PDFs  
 
 ### 🛠️ Painel Administrativo
-- Interface intuitiva  
+- Adicionar Projetos ao Site  
 - Preview em tempo real dos projetos  
 
 ### 📱 Design Responsivo
-- Totalmente adaptado para:
+- adaptado para:
   - Celulares 📱  
   - Tablets 📲  
 
 ### 🌙 Modo Dark/Light
 - Alternância de tema  
-- Persistência com **LocalStorage**
 
 ---
 
-## 🛠️ Como rodar o projeto
+## 🛠️ Como rodar o projeto em localhost
 
 ### ⚙️ Pré-requisitos
 
