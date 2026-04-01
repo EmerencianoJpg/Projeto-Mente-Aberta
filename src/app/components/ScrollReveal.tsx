@@ -12,7 +12,7 @@ export function ScrollReveal({
   children, 
   animation = 'fade-up',
   delay = 0,
-  duration = 800,
+  duration = 500, // Reduzido de 800 para 500 para mais agilidade
   className = ''
 }: ScrollRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,14 +24,13 @@ export function ScrollReveal({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            // Opcional: parar de observar após aparecer
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.1, // 10% do elemento visível
-        rootMargin: '0px 0px -50px 0px' // Começa a animação um pouco antes
+        threshold: 0.05, // Dispara com apenas 5% de visibilidade
+        rootMargin: '0px 0px -20px 0px' // Reduzido para disparar mais rápido ao scrollar
       }
     );
 
@@ -52,7 +51,9 @@ export function ScrollReveal({
       className={`scroll-reveal ${animation} ${isVisible ? 'is-visible' : ''} ${className}`}
       style={{
         transitionDelay: `${delay}ms`,
-        transitionDuration: `${duration}ms`
+        transitionDuration: `${duration}ms`,
+        // Essa curva aqui embaixo é o segredo do toque profissional (começa rápido, termina suave)
+        transitionTimingFunction: 'cubic-bezier(0.25, 1, 0.5, 1)' 
       }}
     >
       {children}
