@@ -76,6 +76,7 @@ da **Universidade Federal de Jataí (UFJ)**
 
 ### 📦 Instalação e Execução
 npm install
+
 npm run dev
 
 ### 🌐 Acesso
