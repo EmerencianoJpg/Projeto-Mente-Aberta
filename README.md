@@ -1,13 +1,107 @@
+# 🧠 Projeto Mente Aberta
+### Mostra Virtual de Psicologia
 
-  # Prototipo de Mostra Virtual
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Ativo-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/Vite-Fast-yellow?style=for-the-badge&logo=vite"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-Styling-38B2AC?style=for-the-badge&logo=tailwind-css"/>
+</p>
 
-  This is a code bundle for Prototipo de Mostra Virtual. The original project is available at https://www.figma.com/design/GX9oQUQlZfmt8u14GYKVgW/Prototipo-de-Mostra-Virtual.
+---
 
-  ## Running the code
+## 📖 Sobre o Projeto
 
-  Run `npm i` to install the dependencies.
+O **Projeto Mente Aberta** é uma plataforma digital permanente dedicada à divulgação da produção científica e acadêmica dos estudantes de Psicologia.
 
-  Run `npm run dev` to start the development server.
-  
+💡 Seu principal objetivo é **aproximar a universidade da comunidade**, promovendo visibilidade para:
+- Pesquisas acadêmicas  
+- Intervenções em saúde mental  
+- Práticas comunitárias  
 
-  
+🎓 O projeto é organizado pelo  
+**OBSAM (Observatório de Saúde Mental e Práticas Comunitárias)**  
+da **Universidade Federal de Jataí (UFJ)**
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,ts,js" />
+</p>
+
+-  **React (v18+)**
+-  **Vite**
+-  **Tailwind CSS**
+-  **Lucide React**
+-  **React Router**
+-  **ScrollReveal Custom**
+
+---
+
+## ✨ Funcionalidades
+
+### 📂 Galeria de Projetos
+- Filtros por:
+  - Curso / Área  
+  - Ano  
+  - Autor  
+
+### 📄 Páginas de Detalhes
+- 🎥 Vídeos  
+- 🎧 Áudios  
+- 🖼️ Galeria de imagens  
+- 📥 Download de artigos e PDFs  
+
+### 🛠️ Painel Administrativo
+- Adicionar Projetos ao Site  
+- Preview em tempo real dos projetos  
+
+### 📱 Design Responsivo
+- adaptado para:
+  - Celulares 📱  
+  - Tablets 📲  
+
+### 🌙 Modo Dark/Light
+- Alternância de tema  
+
+---
+
+## 🛠️ Como rodar o projeto em localhost
+
+### ⚙️ Pré-requisitos
+
+* Node.js instalado
+
+### 📦 Instalação e Execução
+npm install
+
+npm run dev
+
+### 🌐 Acesso
+http://localhost:5173
+
+---
+
+## 👥 Coordenação
+
+**OBSAM - Observatório de Saúde Mental e Práticas Comunitárias**
+**Universidade Federal de Jataí (UFJ)**
+
+### 👩‍🏫 Coordenação Responsável:
+
+* **Franciny M. Barreto** — Coordenadora
+* **Rita de C. A. Martins** — Coordenadora
+* **Ana Danielly Fernandes da Silva** — Vice-coordenadora
+
+---
+
+## 📄 Licença
+
+📌 Este projeto é de caráter **acadêmico e institucional**.
+
+Para informações sobre recursos de terceiros (bibliotecas, ícones, imagens), consulte:
+👉 `ATTRIBUTIONS.md`
+
+---
