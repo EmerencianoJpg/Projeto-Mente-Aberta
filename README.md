@@ -1,75 +1,107 @@
-# 🧠 Projeto Mente Aberta - Mostra Virtual de Psicologia
+# 🧠 Projeto Mente Aberta
+### Mostra Virtual de Psicologia
 
-O **Projeto Mente Aberta** é uma plataforma digital permanente dedicada à divulgação da produção científica e acadêmica dos estudantes de Psicologia. O objetivo é aproximar a universidade da comunidade, dando visibilidade a pesquisas e intervenções em saúde mental e práticas comunitárias.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Ativo-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/Vite-Fast-yellow?style=for-the-badge&logo=vite"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-Styling-38B2AC?style=for-the-badge&logo=tailwind-css"/>
+</p>
 
-Este projeto é organizado pelo **OBSAM (Observatório de Saúde Mental e Práticas Comunitárias)** da **Universidade Federal de Jataí (UFJ)**.
+---
+
+## 📖 Sobre o Projeto
+
+O **Projeto Mente Aberta** é uma plataforma digital permanente dedicada à divulgação da produção científica e acadêmica dos estudantes de Psicologia.
+
+💡 Seu principal objetivo é **aproximar a universidade da comunidade**, promovendo visibilidade para:
+- Pesquisas acadêmicas  
+- Intervenções em saúde mental  
+- Práticas comunitárias  
+
+🎓 O projeto é organizado pelo  
+**OBSAM (Observatório de Saúde Mental e Práticas Comunitárias)**  
+da **Universidade Federal de Jataí (UFJ)**
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-O projeto foi desenvolvido com uma stack moderna de Front-end para garantir performance e responsividade:
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,ts,js" />
+</p>
 
-- ⚛️ React (v18+)
-- ⚡ Vite (Build tool de alta performance)
-- 🎨 Tailwind CSS (Estilização via classes utilitárias)
-- 🧩 Lucide React (Pacote de ícones vetoriais)
-- 🔀 React Router (Gerenciamento de rotas e navegação SPA)
-- ✨ ScrollReveal Custom (Componente personalizado para animações de entrada)
+- ⚛️ **React (v18+)**
+- ⚡ **Vite**
+- 🎨 **Tailwind CSS**
+- 🧩 **Lucide React**
+- 🔀 **React Router**
+- ✨ **ScrollReveal Custom**
 
 ---
 
 ## ✨ Funcionalidades
 
-- 📂 **Galeria Dinâmica**  
-  Visualização de projetos com filtros avançados por curso/área, ano e autor.
+### 📂 Galeria Dinâmica
+- Filtros avançados por:
+  - Curso / Área  
+  - Ano  
+  - Autor  
 
-- 📄 **Páginas de Detalhes**  
-  Suporte multimídia para exibição de vídeos, áudios, galeria de fotos e área de download para artigos e PDFs.
+### 📄 Páginas de Detalhes
+- 🎥 Vídeos  
+- 🎧 Áudios  
+- 🖼️ Galeria de imagens  
+- 📥 Download de artigos e PDFs  
 
-- 🛠️ **Painel Administrativo**  
-  Interface intuitiva para a inclusão de novos projetos com sistema de preview em tempo real.
+### 🛠️ Painel Administrativo
+- Interface intuitiva  
+- Preview em tempo real dos projetos  
 
-- 📱 **Design Responsivo**  
-  Interface totalmente adaptada e otimizada para dispositivos móveis (celulares e tablets).
+### 📱 Design Responsivo
+- Totalmente adaptado para:
+  - Celulares 📱  
+  - Tablets 📲  
 
-- 🌙 **Modo Dark/Light**  
-  Alternância de temas persistente via LocalStorage para melhor acessibilidade.
+### 🌙 Modo Dark/Light
+- Alternância de tema  
+- Persistência com **LocalStorage**
 
 ---
 
 ## 🛠️ Como rodar o projeto
 
-Certifique-se de ter o **Node.js** instalado em sua máquina.
+### ⚙️ Pré-requisitos
 
-### 1. Instale as dependências
+* Node.js instalado
+
+### 📦 Instalação e Execução
 npm install
-
-### 2. Inicie o servidor de desenvolvimento
 npm run dev
 
-### 3. Acesse no navegador
-
-O Vite geralmente abrirá o projeto automaticamente em:
+### 🌐 Acesso
 http://localhost:5173
 
 ---
 
-## 👥 Coordenação e Organização
+## 👥 Coordenação
 
 **OBSAM - Observatório de Saúde Mental e Práticas Comunitárias**
 **Universidade Federal de Jataí (UFJ)**
 
-### Coordenação Responsável:
+### 👩‍🏫 Coordenação Responsável:
 
-* Franciny M. Barreto (Coordenadora)
-* Rita de C. A. Martins (Coordenadora)
-* Ana Danielly Fernandes da Silva (Vice-coordenadora)
+* **Franciny M. Barreto** — Coordenadora
+* **Rita de C. A. Martins** — Coordenadora
+* **Ana Danielly Fernandes da Silva** — Vice-coordenadora
 
 ---
 
 ## 📄 Licença
 
-Este projeto é de caráter acadêmico e institucional.
-Para informações sobre o uso de recursos de terceiros (como bibliotecas, ícones e fotografias), consulte o arquivo `ATTRIBUTIONS.md`.
+📌 Este projeto é de caráter **acadêmico e institucional**.
 
+Para informações sobre recursos de terceiros (bibliotecas, ícones, imagens), consulte:
+👉 `ATTRIBUTIONS.md`
+
+---
