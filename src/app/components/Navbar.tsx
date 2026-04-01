@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useState, useEffect } from 'react';
-const obsamLogo = '/obsam_logo.png'; // Caminho corrigido que já tínhamos feito
+const obsamLogo = '/obsam_logo.png'; 
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +11,8 @@ export function Navbar() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setIsDarkMode(true);
-      document.documentElement.classList.add('dark-mode');
+      // Alterado de 'dark-mode' para 'dark' para compatibilidade nativa com o Tailwind
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
@@ -19,17 +20,19 @@ export function Navbar() {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);
     if (newMode) {
-      document.documentElement.classList.add('dark-mode');
+      // Ativa o modo escuro padrão do Tailwind
+      document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.classList.remove('dark-mode');
+      // Remove o modo escuro
+      document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
   };
 
   return (
     <>
-      {/* 1. Navbar agora é FIXED para acompanhar o scroll sempre */}
+      {/* Navbar FIXED para acompanhar o scroll */}
       <nav className="bg-white border-b-4 border-double border-[#5015bd] fixed top-0 left-0 w-full z-[100] shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
@@ -82,8 +85,7 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* 2. ESPAÇADOR: Como a navbar agora é fixed (flutuante), ela não ocupa espaço no topo. 
-          Adicionamos essa div para empurrar o conteúdo do site para baixo e não tampar o Hero. */}
+      {/* Espaçador para compensar a navbar flutuante */}
       <div className="h-20 w-full"></div>
     </>
   );
