@@ -1,4 +1,4 @@
-# 🧠 Projeto Mente Aberta
+# Projeto Mente Aberta
 ### Mostra Virtual de Psicologia
 
 <p align="center">
@@ -10,22 +10,22 @@
 
 ---
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
 O **Projeto Mente Aberta** é uma plataforma digital permanente dedicada à divulgação da produção científica e acadêmica dos estudantes de Psicologia.
 
-💡 Seu principal objetivo é **aproximar a universidade da comunidade**, promovendo visibilidade para:
+Seu principal objetivo é **aproximar a universidade da comunidade**, promovendo visibilidade para:
 - Pesquisas acadêmicas  
 - Intervenções em saúde mental  
 - Práticas comunitárias  
 
-🎓 O projeto é organizado pelo  
+O projeto é organizado pelo  
 **OBSAM (Observatório de Saúde Mental e Práticas Comunitárias)**  
 da **Universidade Federal de Jataí (UFJ)**
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=react,vite,tailwind,ts,js" />
@@ -40,56 +40,53 @@ da **Universidade Federal de Jataí (UFJ)**
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-### 📂 Galeria de Projetos
+### Galeria de Projetos
 - Filtros por:
   - Curso / Área  
   - Ano  
   - Autor  
 
-### 📄 Páginas de Detalhes
-- 🎥 Vídeos  
-- 🎧 Áudios  
-- 🖼️ Galeria de imagens  
-- 📥 Download de artigos e PDFs  
+### Páginas de Detalhes
+- Vídeos  
+- Áudios  
+- Galeria de imagens  
+- Download de artigos e PDFs  
 
-### 🛠️ Painel Administrativo
+### Painel Administrativo
 - Adicionar Projetos ao Site  
 - Preview em tempo real dos projetos  
 
-### 📱 Design Responsivo
+### Design Responsivo
 - adaptado para:
-  - Celulares 📱  
-  - Tablets 📲  
+  - Celulares  
+  - Tablets
 
-### 🌙 Modo Dark/Light
+### Modo Dark/Light
 - Alternância de tema  
 
 ---
 
-## 🛠️ Como rodar o projeto em localhost
+## Como rodar o projeto em localhost
 
-### ⚙️ Pré-requisitos
+### Pré-requisitos
 
 * Node.js instalado
 
-### 📦 Instalação e Execução
+### Instalação e Execução
 npm install
 
 npm run dev
 
-### 🌐 Acesso
+### acesso
 http://localhost:5173
+
+Link do site hosteado: https://projeto-mente-aberta.onrender.com/
 
 ---
 
-## 👥 Coordenação
-
-**OBSAM - Observatório de Saúde Mental e Práticas Comunitárias**
-**Universidade Federal de Jataí (UFJ)**
-
-### 👩‍🏫 Coordenação Responsável:
+## Coordenação
 
 * **Franciny M. Barreto** — Coordenadora
 * **Rita de C. A. Martins** — Coordenadora
@@ -97,11 +94,9 @@ http://localhost:5173
 
 ---
 
-## 📄 Licença
-
-📌 Este projeto é de caráter **acadêmico e institucional**.
+## Licença
 
 Para informações sobre recursos de terceiros (bibliotecas, ícones, imagens), consulte:
-👉 `ATTRIBUTIONS.md`
+`ATTRIBUTIONS.md`
 
 ---
